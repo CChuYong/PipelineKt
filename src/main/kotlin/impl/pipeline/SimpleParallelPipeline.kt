@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 /**
- * A simple [Pipeline] implementation which executes every pipeline in synchronously, but execute pipelines in parallel context
+ * A simple [Pipeline] implementation which executes every pipeline in synchronously, but execute pipelines in parallel context (call as EventLoop?)
  */
 class SimpleParallelPipeline<T>(
     private val pipeCollection : PipeCollection<T>,

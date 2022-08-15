@@ -5,6 +5,7 @@ import PipeCollection
 import Pipeline
 import PipelineExecutor
 import PipelineHandler
+import java.util.*
 import java.util.concurrent.CompletableFuture
 
 /**
@@ -12,7 +13,7 @@ import java.util.concurrent.CompletableFuture
  */
 class SimpleSynchronousPipeline<T>(
     private val pipeCollection : PipeCollection<T>,
-    private val handlers : Collection<PipelineHandler>,
+    private val handlers : Collection<PipelineHandler> = Collections.emptyList(),
     private val executor : PipelineExecutor<T>
 ) : Pipeline<T> {
     private val handlerMap = mutableMapOf<HandlerType, MutableCollection<PipelineHandler>>()
