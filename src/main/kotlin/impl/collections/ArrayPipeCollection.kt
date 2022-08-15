@@ -4,11 +4,12 @@ import PipeCollection
 import PipelineElement
 
 open class ArrayPipeCollection<T>(internal var pipeArray : Array<PipelineElement<T>> = arrayOf()) : PipeCollection<T>{
+    internal var iterationIndex = 0
     override fun hasNext(): Boolean {
-        TODO("Not yet implemented")
+        return iterationIndex < this.pipeArray.size
     }
 
     override fun next(): PipelineElement<T> {
-        TODO("Not yet implemented")
+        return this.pipeArray[iterationIndex++]
     }
 }

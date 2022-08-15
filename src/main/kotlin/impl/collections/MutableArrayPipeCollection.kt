@@ -14,12 +14,4 @@ open class MutableArrayPipeCollection<T>() : ArrayPipeCollection<T>(), MutablePi
     override fun remove(pipe: PipelineElement<T>) {
         TODO("Not yet implemented")
     }
-
-    override fun hasNext(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun next(): PipelineElement<T> {
-        TODO("Not yet implemented")
-    }
 }
